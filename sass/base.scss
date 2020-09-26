@@ -1,0 +1,57 @@
+@mixin respond($breakpoint)
+{
+    @if $breakpoint == phone
+    {   
+        @media(max-width:600px)
+        {
+            @content;
+        }
+    }   
+    @if $breakpoint == tab-port
+    {
+        @media(max-width:900px)
+        {
+            @content;
+        }
+    }   
+    @if $breakpoint == tab-land
+    {
+        @media(max-width:1200px)
+        {
+            @content;
+        }
+    }   
+}
+
+html
+{
+    font-size: 62.5%;
+    font-family: 'lato',sans-serif;
+
+    @include respond(tab-port)
+    {     
+        font-size: 55%;  
+    }
+    @include respond(tab-port)
+    {     
+        font-size: 55%;  
+    }
+    @include respond(phone)
+    {     
+        font-size: 50%;  
+    }
+}
+*,*::before,*::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection
+{
+    background-color: rgb(4, 0, 122);
+}
+$nav-background:rgb(61, 61, 61);
+$icon-background:white;
+$box-shadow:0.1rem 0.1rem 1rem 0.5rem rgba(0, 0, 0, 0.424);
+

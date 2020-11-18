@@ -227,6 +227,9 @@ button, a {
     .navigation {
       display: none; } }
 
+a {
+  text-decoration: none; }
+
 .nav-list-1 {
   display: flex;
   width: 50rem;

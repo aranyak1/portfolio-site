@@ -37,29 +37,6 @@ let flag = false;
   
 projectButton.addEventListener('click',toggleProjects)
 
-
-    if(window.innerWidth < 900)
-    {
-       toggleProjects();
-       projectButton.classList.remove('invisible');
-    }   
-
-    function toggleProjects()
-    {  
-        project[2].classList.toggle('invisible');
-        project[3].classList.toggle('invisible');
-        project[4].classList.toggle('invisible');
-        project[5].classList.toggle('invisible');
-        if(projectButton.textContent == 'SEE LESS')
-        {
-            projectButton.textContent = 'SEE MORE'; 
-        }
-        else
-        {
-            projectButton.textContent = 'SEE LESS'; 
-        }
-    }
-
 const mobileNav =  document.querySelector('.mobile-nav');
 mobileNav.addEventListener('click',()=>{
     const mobileNavPage = document.querySelector('.mobile-nav-page');

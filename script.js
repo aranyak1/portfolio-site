@@ -5,7 +5,7 @@ const typeElement = document.getElementById('typing');
 function type()
 {
             typeElement.textContent=typeElement.textContent+s[index];
-            index++;
+            index++;   
             if(index <= s.length-1)
             {
                 setTimeout(type,100);
@@ -32,12 +32,9 @@ window.addEventListener('scroll',() => {
 }) ;
 
 const project = document.getElementsByClassName('project');
-const projectButton = document.querySelector('.project-button-1');
-let flag = false;
-  
-projectButton.addEventListener('click',toggleProjects)
 
 const mobileNav =  document.querySelector('.mobile-nav');
+console.log(mobileNav);
 mobileNav.addEventListener('click',()=>{
     const mobileNavPage = document.querySelector('.mobile-nav-page');
             mobileNavPage.classList.toggle('invisible');
